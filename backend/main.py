@@ -17,12 +17,12 @@ with open('naive_bayes_model.pkl', 'rb') as file:
 with open('scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
-# Check if the model is loaded correctly
-if model is None:
-    print("Model loading failed!")
-else:
-    print("Model loaded successfully.")
-    print(model)
+# # Check if the model is loaded correctly
+# if model is None:
+#     print("Model loading failed!")
+# else:
+#     print("Model loaded successfully.")
+#     print(model)
 
 frontend_folder = os.path.join(os.getcwd(), "..", "frontend")
 dist_folder = os.path.join(frontend_folder, "dist")
