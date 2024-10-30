@@ -18,7 +18,7 @@ const MainDiv = () => {
   const { mutate, isPending } = useMutation({
     mutationFn: async ({ age, glucose, insulin, bmi }) => {
       try {
-        const res = await fetch("http://localhost:5000/app/predict", {
+        const res = await fetch("http://127.0.0.1:5000/app/predict", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
