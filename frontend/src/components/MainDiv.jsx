@@ -4,7 +4,7 @@ import Diabetic from "./Diabetic";
 import NonDiabetic from "./NonDiabetic";
 import { useMutation } from "@tanstack/react-query";
 import toast from "react-hot-toast";
-import { Base_URL } from "../App";
+import { BASE_URL } from "../App";
 
 const MainDiv = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ const MainDiv = () => {
   const { mutate, isPending } = useMutation({
     mutationFn: async ({ age, glucose, insulin, bmi }) => {
       try {
-        const res = await fetch(Base_URL + "/predict", {
+        const res = await fetch(BASE_URL + "/predict", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
